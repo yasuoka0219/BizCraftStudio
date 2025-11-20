@@ -48,18 +48,24 @@ BizCraft Studioの架空コーポレートサイト。中小企業・個人事�
 
 ## Recent Changes
 
-### 2025-11-20: Reasons Section Redesign with Horizontal Layout
-- **選ばれる理由セクションのデザインリニューアル**:
-  - 5つのカードから3つのreason-cardに変更
-  - 横並びレイアウト（番号・テキスト・画像）に変更
+### 2025-11-20: Reasons Section Expansion to 5 Items
+- **選ばれる理由セクションを5つに拡張**:
+  - 01: 完全オーダーメイドのシステム設計
+  - 02: 中小企業・個人事業主に特化した開発スタイル
+  - 03: 課題ヒアリングから改善提案まで伴走
+  - 04: AI × 自動化で最大限の効率化
+  - 05: CRM・勤怠・HP・AIまで幅広く対応できる柔軟性
+- **横並びレイアウト（番号・テキスト・画像）**:
   - 大きな薄い青色の番号を左側に配置（5rem、rgba(56, 189, 248, 0.15)）
   - 中央にタイトルと説明文、右側に画像を配置
   - 奇数/偶数で背景色を変化させる
   - hover効果: 背景色の変化、画像の拡大（scale: 1.05）
-- **AI生成画像追加**:
-  - images/reason-consulting.png: ビジネスコンサルティングの画像
-  - images/reason-ai.png: AIアルゴリズム開発の画像
-  - images/reason-system.png: システム開発コード画面の画像
+- **AI生成画像5つ**:
+  - images/reason-custom.png: カスタムシステム設計のビジュアライゼーション
+  - images/reason-smallbiz.png: 中小企業向けワークスペース
+  - images/reason-consulting.png: ビジネスコンサルティング
+  - images/reason-ai.png: AIアルゴリズム開発
+  - images/reason-system.png: システム開発コード画面
 - **レスポンシブ対応**:
   - デスクトップ（769px以上）: 横並びレイアウト
   - タブレット（481px-768px）: 縦並びレイアウト、中央揃え
