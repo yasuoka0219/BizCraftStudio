@@ -897,6 +897,88 @@ ul {
 }
 
 /* ================================================
+   Reason Section & Cards
+   ================================================ */
+.reason-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.reason-card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.4) 0%, rgba(30, 41, 59, 0.4) 100%);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.reason-card:nth-child(even) {
+  background: linear-gradient(135deg, rgba(10, 14, 39, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+.reason-card:hover {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.7) 100%);
+  border-color: rgba(0, 217, 255, 0.3);
+}
+
+.reason-card__number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(56, 189, 248, 0.15);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 120px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: -0.05em;
+  text-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+.reason-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.reason-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.reason-card__text {
+  color: #CBD5E1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.reason-card__image {
+  flex-shrink: 0;
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 217, 255, 0.1);
+  position: relative;
+}
+
+.reason-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.reason-card:hover .reason-card__image img {
+  transform: scale(1.05);
+}
+
+/* ================================================
    Service Section & Cards
    ================================================ */
 .section--dark {
@@ -1692,6 +1774,24 @@ ul {
   .service-card__content {
     padding: 1.5rem;
   }
+
+  .reason-card {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .reason-card__number {
+    font-size: 4rem;
+    min-width: auto;
+  }
+
+  .reason-card__image {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 481px) {
@@ -1751,5 +1851,26 @@ ul {
 
   .service-card__title {
     font-size: 1.1rem;
+  }
+
+  .reason-card {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .reason-card__number {
+    font-size: 2.8rem;
+  }
+
+  .reason-card__title {
+    font-size: 1.1rem;
+  }
+
+  .reason-card__text {
+    font-size: 0.85rem;
+  }
+
+  .reason-card__image {
+    height: 160px;
   }
 }
