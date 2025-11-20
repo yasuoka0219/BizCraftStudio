@@ -39,6 +39,12 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-11-20: Section Removal
+- **不要なセクションの削除**:
+  - service-system.html から「解決できること」セクションを削除
+  - service-ai.html から「できることの例」セクションを削除
+- **目的**: コンテンツの整理・簡素化
+
 ### 2025-11-20: Service Flow Visual Redesign
 - **「サービスの流れ」セクションのビジュアルデザイン変更**:
   - **新デザイン**: 画像左・テキスト右のレイアウト（参考画像に基づく）
