@@ -36,3 +36,31 @@ The design adopts a dark, technology-themed aesthetic, inspired by AI/SaaS inter
 
 ## External Dependencies
 None. The project is built using pure HTML and CSS with no external libraries, frameworks, or third-party services integrated.
+
+## Recent Changes
+
+### 2025-11-20: Service Flow Visual Redesign
+- **「サービスの流れ」セクションのビジュアルデザイン変更**:
+  - **新デザイン**: 画像左・テキスト右のレイアウト（参考画像に基づく）
+  - **ストック画像追加**: 各ステップに対応するビジネス写真を9枚取得
+    - business_meeting_con_6813ae6d.jpg: ヒアリング・相談シーン
+    - business_planning_de_21d9317b.jpg: 計画・設計シーン
+    - software_development_81ddebf7.jpg: 開発・コーディングシーン
+    - business_handshake_d_433cbeba.jpg: 契約・握手シーン
+    - web_design_creative__f9ac8c4b.jpg: Webデザイン制作シーン
+    - website_launch_celeb_59dd9cc7.jpg: サイト公開・祝賀シーン
+    - business_analysis_da_6f475cfa.jpg: ビジネス分析シーン
+    - ai_artificial_intell_89b0b8b3.jpg: AI開発シーン
+    - software_testing_qua_8c2fc786.jpg: ソフトウェアテストシーン
+  - **CSSの変更**:
+    - flow-stepを2列グリッドレイアウト（画像40%、テキスト60%）に変更
+    - flow-step__imageを追加（角丸、hover時拡大効果）
+    - flow-step__badgeを追加（青いグラデーションバッジ "STEP 01"形式）
+    - flow-step__contentを追加（テキストコンテンツのラッパー）
+    - ステップ間に青い下向き矢印（▼）を追加
+    - 淡い青/グレーの背景（rgba(226, 232, 240, 0.08)）
+  - **レスポンシブ対応**:
+    - PC（769px以上）: 画像左・テキスト右の2列レイアウト
+    - タブレット・モバイル（768px以下）: 画像上・テキスト下の1列レイアウト
+  - **適用ページ**: service-system.html（4STEP）、service-website.html（4STEP）、service-ai.html（3STEP）
+- **パフォーマンス最適化**: すべての画像に`loading="lazy"`を追加
