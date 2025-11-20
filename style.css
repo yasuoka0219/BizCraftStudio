@@ -1042,6 +1042,37 @@ ul {
   color: #475569;
   line-height: 1.8;
   font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.service-card__link {
+  display: inline-block;
+  color: #00D9FF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.service-card__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D9FF, #38BDF8);
+  transition: width 0.3s ease;
+}
+
+.service-card__link:hover {
+  color: #38BDF8;
+  transform: translateX(4px);
+}
+
+.service-card__link:hover::after {
+  width: 100%;
 }
 
 /* ================================================
@@ -1596,6 +1627,387 @@ ul {
 .cta-button:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 12px 32px rgba(0, 217, 255, 0.6), 0 0 60px rgba(0, 217, 255, 0.4);
+}
+
+/* ================================================
+   Service Detail Page - Page Hero
+   ================================================ */
+.page-hero {
+  background: linear-gradient(135deg, #0A0E27 0%, #0F172A 50%, #1E293B 100%);
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(0, 217, 255, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 70% 60%, rgba(56, 189, 248, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-hero__content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero__title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+  text-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+}
+
+.page-hero__subtitle {
+  font-size: 1.2rem;
+  color: #CBD5E1;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.page-hero__buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ================================================
+   Service Detail Page - Flow Steps
+   ================================================ */
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.flow-step {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.flow-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #00D9FF, #38BDF8);
+  transition: height 0.4s ease;
+}
+
+.flow-step:hover::before {
+  height: 100%;
+}
+
+.flow-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 217, 255, 0.15);
+  border-color: rgba(0, 217, 255, 0.4);
+}
+
+.flow-step__number {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #00D9FF, #38BDF8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0A0E27;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4);
+}
+
+.flow-step__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+
+.flow-step__text {
+  color: #CBD5E1;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ================================================
+   Service Detail Page - FAQ Section
+   ================================================ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.faq-item:hover {
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.faq-item__question {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.faq-item__question::before {
+  content: 'Q';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #00D9FF, #38BDF8);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0A0E27;
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
+}
+
+.faq-item__answer {
+  color: #CBD5E1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  padding-left: 2.5rem;
+}
+
+/* ================================================
+   Service Detail Page - Feature List
+   ================================================ */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.feature-item__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px #00D9FF);
+}
+
+.feature-item__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+
+.feature-item__text {
+  color: #CBD5E1;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ================================================
+   Service Detail Page - Before/After
+   ================================================ */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.before-after-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.before-after-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 217, 255, 0.15);
+}
+
+.before-after-card__label {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.before-after-card__label--before {
+  background: linear-gradient(135deg, rgba(255, 82, 82, 0.2), rgba(239, 68, 68, 0.2));
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.before-after-card__label--after {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(56, 189, 248, 0.2));
+  color: #00D9FF;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.before-after-card__text {
+  color: #CBD5E1;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ================================================
+   Service Detail Page - Strength List
+   ================================================ */
+.strength-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.strength-item {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.strength-item:hover {
+  transform: translateX(8px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.strength-item__icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px #00D9FF);
+  flex-shrink: 0;
+}
+
+.strength-item__content {
+  flex: 1;
+}
+
+.strength-item__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+
+.strength-item__text {
+  color: #CBD5E1;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ================================================
+   Service Detail Page - Use Case List
+   ================================================ */
+.usecase-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.usecase-item {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.usecase-item::before {
+  content: '✓';
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #00D9FF, #38BDF8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0A0E27;
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
+}
+
+.usecase-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 217, 255, 0.1);
+}
+
+.usecase-item__text {
+  color: #E2E8F0;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* ================================================
