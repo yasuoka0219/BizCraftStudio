@@ -1687,65 +1687,91 @@ ul {
    Service Detail Page - Flow Steps
    ================================================ */
 .flow-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   margin-top: 3rem;
 }
 
 .flow-step {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 2.5rem;
+  background: rgba(226, 232, 240, 0.08);
   border-radius: 16px;
-  padding: 2rem;
-  border: 1px solid rgba(0, 217, 255, 0.2);
-  transition: all 0.3s ease;
+  padding: 2.5rem;
   position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-}
-
-.flow-step::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 0;
-  background: linear-gradient(180deg, #00D9FF, #38BDF8);
-  transition: height 0.4s ease;
-}
-
-.flow-step:hover::before {
-  height: 100%;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
 }
 
 .flow-step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 217, 255, 0.15);
-  border-color: rgba(0, 217, 255, 0.4);
+  background: rgba(226, 232, 240, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.flow-step::after {
+  content: '▼';
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #38BDF8;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+.flow-step:last-child::after {
+  display: none;
+}
+
+.flow-step__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flow-step__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.flow-step:hover .flow-step__image img {
+  transform: scale(1.05);
+}
+
+.flow-step__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flow-step__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #00D9FF, #38BDF8);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  width: fit-content;
+  letter-spacing: 0.05em;
 }
 
 .flow-step__number {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #00D9FF, #38BDF8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #0A0E27;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4);
+  display: none;
 }
 
 .flow-step__title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .flow-step__text {
@@ -2288,6 +2314,21 @@ ul {
 
   .service-card__image {
     height: 200px;
+  }
+
+  .flow-step {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .flow-step__image {
+    height: 200px;
+  }
+
+  .flow-step__title {
+    font-size: 1.1rem;
   }
 
   .service-card__content {
