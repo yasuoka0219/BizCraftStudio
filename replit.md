@@ -6,13 +6,16 @@ BizCraft Studioの架空コーポレートサイト。中小企業・個人事�
 ## Project Structure
 ```
 /
-├── index.html      # トップページ（ヒーロー、選ばれる理由、サービス一覧）
-├── works.html      # 制作実績ページ（6件の実績カード）
-├── voice.html      # お客様の声ページ（4件のテスティモニアル）
-├── price.html      # 料金プランページ（3つのプラン）
-├── about.html      # BizCraft Studioについて（代表メッセージ・プロフィール）
-├── contact.html    # お問い合わせページ（フォームUI）
-└── style.css       # 共通スタイルシート
+├── index.html           # トップページ（ヒーロー、選ばれる理由、サービス一覧）
+├── service-system.html  # サービス詳細：業務システム開発（CRM・SFA・業務管理）
+├── service-website.html # サービス詳細：ホームページ制作
+├── service-ai.html      # サービス詳細：AIツール構築・業務自動化
+├── works.html           # 制作実績ページ（6件の実績カード）
+├── voice.html           # お客様の声ページ（4件のテスティモニアル）
+├── price.html           # 料金プランページ（3つのプラン）
+├── about.html           # BizCraft Studioについて（代表メッセージ・プロフィール）
+├── contact.html         # お問い合わせページ（フォームUI）
+└── style.css            # 共通スタイルシート
 ```
 
 ## Technical Specifications
@@ -47,6 +50,39 @@ BizCraft Studioの架空コーポレートサイト。中小企業・個人事�
 - **3D球体要素**: ヒーローセクション右側に配置された3つの球体（三角形配置）
 
 ## Recent Changes
+
+### 2025-11-20: Service Detail Pages Addition
+- **3つのサービス詳細ページを追加**:
+  - service-system.html: 業務システム開発（CRM・SFA・業務管理）の詳細ページ
+  - service-website.html: ホームページ制作の詳細ページ
+  - service-ai.html: AIツール構築・業務自動化の詳細ページ
+- **各詳細ページの構成**:
+  - page-hero（ページヒーロー）
+  - サービス概要セクション
+  - BizCraft Studioの強み（strength-list）
+  - 解決できること・できることの例（usecase-list）
+  - 提供機能・制作できるサイトの種類（feature-list）
+  - サービスの流れ（flow-steps: 8ステップ図解）
+  - 導入効果・成果イメージ（before-after-grid）
+  - FAQ（faq-list）
+  - CTAセクション
+- **新規CSSコンポーネント追加**:
+  - page-hero: 詳細ページ用ヒーローセクション
+  - flow-steps / flow-step: サービスの流れのステップ表示
+  - faq-list / faq-item: FAQ表示
+  - feature-list / feature-item: 機能・特徴リスト
+  - before-after-grid / before-after-card: Before/After比較カード
+  - strength-list / strength-item: 強みリスト（横並び・アイコン付き）
+  - usecase-list / usecase-item: ユースケース・解決できることリスト
+  - service-card__link: サービスカードの「詳しく見る」リンク
+- **トップページ（index.html）の更新**:
+  - サービスカードに「詳しく見る →」リンクを追加
+  - 各サービス詳細ページへの導線を実装
+- **デザインの統一性**:
+  - 既存のダーク系テクノロジーデザインを完全に維持
+  - 青/シアンのグラデーション、グロー効果を全ページで統一
+  - 既存のBEM風クラス命名規則を踏襲
+  - hover効果、アニメーション、トランジションも既存と統一
 
 ### 2025-11-20: CTA Section Addition
 - **お問い合わせCTAセクションを追加**:
@@ -186,6 +222,9 @@ python -m http.server 5000
 ### Navigation Structure
 - ホーム（index.html）
 - サービス（index.html#service - ページ内リンク）
+  - 業務システム開発（service-system.html）
+  - ホームページ制作（service-website.html）
+  - AIツール構築（service-ai.html）
 - 実績（works.html）
 - お客様の声（voice.html）
 - 料金プラン（price.html）
