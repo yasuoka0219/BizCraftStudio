@@ -1911,45 +1911,63 @@ ul {
    Service Detail Page - Strength List
    ================================================ */
 .strength-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 3rem;
 }
 
 .strength-item {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 0;
   border: 1px solid rgba(0, 217, 255, 0.2);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
 }
 
 .strength-item:hover {
-  transform: translateX(8px);
+  transform: translateY(-6px);
   border-color: rgba(0, 217, 255, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 217, 255, 0.1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 217, 255, 0.15);
 }
 
-.strength-item__icon {
-  font-size: 2.5rem;
-  filter: drop-shadow(0 0 10px #00D9FF);
+.strength-item__image {
+  width: 180px;
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.strength-item:hover .strength-item__image img {
+  transform: scale(1.05);
 }
 
 .strength-item__content {
   flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .strength-item__title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 0.8rem;
+  line-height: 1.4;
 }
 
 .strength-item__text {
@@ -2309,6 +2327,24 @@ ul {
   .cta-button {
     padding: 1rem 2.5rem;
     font-size: 1rem;
+  }
+
+  .strength-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .strength-item {
+    flex-direction: column;
+  }
+
+  .strength-item__image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .strength-item__content {
+    padding: 1.5rem;
   }
 }
 
