@@ -897,6 +897,72 @@ ul {
 }
 
 /* ================================================
+   Service Section & Cards
+   ================================================ */
+.section--dark {
+  background: linear-gradient(135deg, #0A0E27 0%, #0F172A 100%);
+  position: relative;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 217, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 80px rgba(0, 217, 255, 0.2);
+}
+
+.service-card__image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #0A0E27 0%, #1E293B 100%);
+}
+
+.service-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.08);
+}
+
+.service-card__content {
+  padding: 2rem;
+  background: #FFFFFF;
+}
+
+.service-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0A0E27;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.service-card__text {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ================================================
    Testimonial Card
    ================================================ */
 .testimonial-card {
@@ -1618,6 +1684,21 @@ ul {
   .card__number {
     font-size: 2.5rem;
   }
+
+  .service-card__image {
+    height: 200px;
+  }
+
+  .service-card__content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1653,5 +1734,22 @@ ul {
     font-size: 5rem;
     right: 15px;
     top: 10px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card__image {
+    height: 180px;
+  }
+
+  .service-card__content {
+    padding: 1.2rem;
+  }
+
+  .service-card__title {
+    font-size: 1.1rem;
   }
 }
