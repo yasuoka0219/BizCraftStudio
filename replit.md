@@ -48,6 +48,23 @@ BizCraft Studioの架空コーポレートサイト。中小企業・個人事�
 
 ## Recent Changes
 
+### 2025-11-20: Service Section Redesign with AI-Generated Images
+- **サービスセクションのデザインリニューアル**:
+  - AI生成画像を使用した3つのサービスカード（CRM、Web制作、AI自動化）
+  - 画像上部・テキスト下部のカードレイアウトに変更
+  - ダーク背景（section--dark）に白いカード（service-card）を配置
+  - ホログラフィック・インターフェース風のテクノロジー画像
+  - 青/シアン系のビジュアルでサイト全体のトンマナに統一
+- **レスポンシブグリッドレイアウト**:
+  - デスクトップ（769px以上）: 3列グリッド（auto-fit）
+  - タブレット（481px-768px）: 2列グリッド（明示的指定）
+  - モバイル（480px以下）: 1列グリッド
+  - hover効果: カード上昇 + 画像拡大アニメーション
+- **画像アセット追加**:
+  - images/service-crm.png: CRMシステムのホログラフィック画像
+  - images/service-web.png: Web制作のテクノロジー画像
+  - images/service-ai.png: AI自動化のネットワーク画像
+
 ### 2025-11-20: Hero Section Orb Design Update
 - **ファーストビュー右側BOXのデザイン変更**: 
   - 従来の縦並びカードから3つの球体（Orb）デザインに変更
