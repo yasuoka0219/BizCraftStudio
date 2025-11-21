@@ -39,6 +39,25 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-11-20: Testimonial Spotlight Redesign
+- **お客様の声セクションの全面リニューアル**:
+  - **新しいデザイン形式**: 従来の小さなカードから大きなスポットライト形式に変更
+  - **レイアウト**: 
+    - PC: 左側40%（会社情報、業種タグ、KPI、商材・期間、詳細説明）、右側60%（人物写真）
+    - モバイル: 縦並び（写真上、コンテンツ下）
+  - **ビジュアル要素**:
+    - 業種タグ（青いピル型バッジ）
+    - KPI強調ブロック（オレンジグラデーション、大きな数値）
+    - 淡い青/グレーのグラデーション背景
+    - ビジネスポートレート写真（6枚のストック画像）
+  - **適用ページ**:
+    - service-system.html: 「導入効果イメージ」→「お客様の声」（製造業B社の事例）
+    - service-website.html: 「成果イメージ」→「お客様の声」（サービス業C社の事例）
+    - service-ai.html: 「導入効果イメージ」→「お客様の声」（EC事業D社の事例）
+    - voice.html: 4件のお客様の声（B社、C社、D社、E社）
+  - **CSSクラス**: testimonial-spotlight（メインコンテナ）、testimonial-spotlight__content、testimonial-spotlight__media、testimonial-spotlight__kpi（KPI強調）、testimonial-spotlight__tags（業種タグ）
+  - **レスポンシブ**: ≤768pxでフレックスからカラムレイアウトに変更、画像アスペクト比調整
+
 ### 2025-11-20: Section Removal
 - **不要なセクションの削除**:
   - service-system.html から「解決できること」セクションを削除
