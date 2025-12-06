@@ -39,7 +39,18 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
-### 2025-11-20: Testimonial Spotlight Redesign
+### 2025-12-06: Testimonial Spotlight Light Theme Redesign
+- **お客様の声セクションのライトテーマへ変更**:
+  - **背景**: ダーク→ライトグレー（rgba(241, 245, 249, 0.95)）に変更
+  - **新要素**:
+    - `testimonial-spotlight__title`: 大きなヘッドラインタイトル（数値部分を青色strong強調）
+    - KPIボックス: 青い枠線（2px solid #00D9FF）のボックスデザイン
+    - 商材・期間アイコン: 📦（--product）、📅（--period）を::before疑似要素で追加
+  - **テキストカラー**: 白→ダークグレー（#1e293b / #475569）
+  - **適用ページ**: voice.html、service-system.html、service-website.html、service-ai.html
+  - **CSSバージョン**: 全ページをv=20251206に統一
+
+### 2025-11-20: Testimonial Spotlight Initial Design
 - **お客様の声セクションの全面リニューアル**:
   - **新しいデザイン形式**: 従来の小さなカードから大きなスポットライト形式に変更
   - **レイアウト**: 
