@@ -2378,6 +2378,26 @@ ul {
   filter: drop-shadow(0 0 10px #00D9FF);
 }
 
+.feature-item__image {
+  width: 100%;
+  height: 140px;
+  margin-bottom: 1.25rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.feature-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-item__image img {
+  transform: scale(1.05);
+}
+
 .feature-item__title {
   font-size: 1.2rem;
   font-weight: 700;
