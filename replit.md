@@ -39,6 +39,27 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-12-07: Feature Section Image Conversion
+- **機能例・サイト種類セクションの画像化**:
+  - **service-system.html「提供できる機能例」セクション**:
+    - 絵文字アイコンからAI生成画像に差し替え
+    - CRM / SFA → crm_sales_management_dashboard.png
+    - KPIダッシュボード → kpi_analytics_dashboard.png
+    - 勤怠 / シフト管理 → shift_attendance_management_system.png
+    - 見積・契約・請求管理 → invoice_contract_management.png
+    - 在庫管理 → inventory_warehouse_management.png
+    - 通知・リマインド機能 → notification_reminder_alerts.png
+  - **service-website.html「制作できるサイトの種類」セクション**:
+    - 絵文字アイコンからAI生成画像に差し替え
+    - コーポレートサイト → corporate_business_website.png
+    - サービスサイト → service_product_website.png
+    - LP（ランディングページ） → landing_page_design.png
+    - 採用サイト → recruitment_career_website.png
+    - ブログ・実績ページ付きサイト → blog_portfolio_website.png
+    - ECサイト → e-commerce_online_store.png
+  - **CSSクラス追加**: `.feature-item__image`（140px高さ、角丸、ホバーエフェクト）
+  - **レスポンシブ対応**: object-fit: coverで画像をカバー表示
+
 ### 2025-12-07: Testimonial Images Update & Square Cropping
 - **お客様の声セクションの画像差し替え**:
   - **新画像**: Gemini生成の4枚のビジネス写真に差し替え
