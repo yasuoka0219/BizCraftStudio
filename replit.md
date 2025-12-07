@@ -39,6 +39,20 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-12-07: Testimonial Images Update & Square Cropping
+- **お客様の声セクションの画像差し替え**:
+  - **新画像**: Gemini生成の4枚のビジネス写真に差し替え
+    - 1. ミーティングシーン（製造業B社）
+    - 2. カフェで電話する女性（サービス業C社）
+    - 3. 自宅作業のデザイナー（EC事業D社）
+    - 4. 飲食店の店長（飲食チェーンE社）
+  - **正方形トリミング**: 
+    - PC: 280x280px
+    - モバイル: 200x200px
+  - **object-position**: center topで顔が見切れないよう調整
+  - **適用ページ**: voice.html、service-system.html、service-website.html、service-ai.html
+  - **CSSバージョン**: v=20251207に統一
+
 ### 2025-12-06: Testimonial Spotlight Light Theme Redesign
 - **お客様の声セクションのライトテーマへ変更**:
   - **背景**: ダーク→ライトグレー（rgba(241, 245, 249, 0.95)）に変更
