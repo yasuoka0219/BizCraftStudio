@@ -1912,6 +1912,132 @@ ul {
 }
 
 /* ================================================
+   About Page - Profile Section
+   ================================================ */
+.about-profile {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  position: relative;
+  backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00D9FF, #38BDF8, #00D9FF);
+  border-radius: 16px 16px 0 0;
+}
+
+.about-profile__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-profile__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #00D9FF, #38BDF8);
+  border-radius: 2px;
+}
+
+.about-profile__text {
+  color: #CBD5E1;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.about-profile__list {
+  list-style: none;
+}
+
+.about-profile__list-item {
+  padding: 0.9rem 0;
+  color: #CBD5E1;
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.7;
+}
+
+.about-profile__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #00D9FF, #38BDF8);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+}
+
+.about-profile__list-item::after {
+  content: '✓';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0A0E27;
+  font-weight: 700;
+  font-size: 0.65rem;
+}
+
+/* ================================================
+   About Page - Message Section
+   ================================================ */
+.section--message {
+  background: linear-gradient(180deg, rgba(10, 14, 39, 0.3) 0%, rgba(15, 23, 42, 0.6) 100%);
+  padding: 6rem 0;
+}
+
+.message-block {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message-block__headline {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00D9FF;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+}
+
+.message-block__body {
+  text-align: center;
+}
+
+.message-block__body p {
+  color: #CBD5E1;
+  line-height: 2.2;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.message-block__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================================
    Form
    ================================================ */
 .form {
@@ -3020,5 +3146,22 @@ ul {
   .cta-button {
     padding: 0.9rem 2rem;
     font-size: 0.95rem;
+  }
+
+  .about-profile {
+    padding: 2rem;
+  }
+
+  .about-profile__title {
+    font-size: 1.3rem;
+  }
+
+  .message-block__headline {
+    font-size: 1.4rem;
+    line-height: 1.9;
+  }
+
+  .message-block__body p {
+    font-size: 0.9rem;
   }
 }
