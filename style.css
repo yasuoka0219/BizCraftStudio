@@ -2038,6 +2038,97 @@ ul {
 }
 
 /* ================================================
+   About Page - Value Cards (3 columns)
+   ================================================ */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.value-card__image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.value-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-card__image img {
+  transform: scale(1.05);
+}
+
+.value-card__content {
+  padding: 1.5rem;
+}
+
+.value-card__number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00D9FF;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
+.value-card__number::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00D9FF, transparent);
+  border-radius: 2px;
+}
+
+.value-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+
+.value-card__text {
+  color: #CBD5E1;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .value-card__image {
+    height: 180px;
+  }
+}
+
+/* ================================================
    Form
    ================================================ */
 .form {
