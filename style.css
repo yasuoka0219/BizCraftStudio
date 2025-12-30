@@ -4605,3 +4605,204 @@ ul {
     padding: 1.25rem 1.5rem;
   }
 }
+
+/* ================================================
+   Case Studies Slider Section
+   ================================================ */
+
+.case-slider-section {
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
+.case-slider {
+  position: relative;
+  width: 100%;
+}
+
+.case-slider__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0 2rem;
+  padding-left: calc((100vw - 1200px) / 2 + 1rem);
+  padding-right: 2rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.case-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.case-slide {
+  flex: 0 0 340px;
+  min-width: 340px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.case-slide__header {
+  padding: 1.25rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.case-slide__label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6366F1;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-slide__number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #6366F1;
+  line-height: 1.2;
+}
+
+.case-slide__company {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  padding: 0.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.case-slide__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.case-slide__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.3s ease;
+}
+
+.case-slide:hover .case-slide__image img {
+  transform: scale(1.05);
+}
+
+.case-slide__title {
+  padding: 1.25rem 1.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 4.5rem;
+}
+
+.case-slide__footer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.case-slide__tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.case-slide__tag--blue {
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.case-slide__tag--green {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.case-slide__tag--purple {
+  background: #F5F3FF;
+  color: #7C3AED;
+}
+
+.case-slide__tag--orange {
+  background: #FFF7ED;
+  color: #EA580C;
+}
+
+.case-slide__person {
+  margin-bottom: 0.5rem;
+}
+
+.case-slide__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.case-slide__hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-slide__hashtags span {
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.case-slider__hint {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.case-slider__hint span {
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.case-slider__cta {
+  text-align: center;
+}
+
+/* Responsive - Case Slider */
+@media (max-width: 1200px) {
+  .case-slider__track {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-slide {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+  
+  .case-slider__track {
+    padding-left: 1rem;
+    gap: 1rem;
+  }
+  
+  .case-slide__image {
+    height: 180px;
+  }
+  
+  .case-slide__number {
+    font-size: 2rem;
+  }
+}

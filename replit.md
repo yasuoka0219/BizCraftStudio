@@ -39,6 +39,21 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-12-30: Case Studies Slider & Column Navigation
+- **導入事例スライダーセクション追加（index.html）**:
+  - サービスセクションとCTAセクションの間にスライド式導入事例セクションを追加
+  - CSS scroll-snapを使用したJavaScript不要の横スクロールスライダー
+  - 5件の事例カード（製造業A社、サービス業B社、EC事業C社、飲食チェーンD社、コンサル会社E社）
+  - 各カードに: Case番号、企業名、写真、成果タイトル、業種タグ（色分け）、担当者名、ハッシュタグ
+  - 新CSSクラス: .case-slider-section, .case-slide, .case-slide__header/company/image/title/footer等
+- **コラム機能実装**:
+  - column.html: コラム一覧ページ（カテゴリタブ、3カラムグリッド、ページネーション）
+  - column/inside-sales-basics.html: インサイドセールス基礎記事
+  - column/crm-introduction-guide.html: CRM導入ガイド記事
+  - column/ai-business-automation.html: AI業務自動化記事
+  - 全ページのナビゲーションに「コラム」リンクを追加（会社情報とお問い合わせの間）
+  - 新CSSクラス: .column-grid, .column-card, .article-toc, .category-tabs等
+
 ### 2025-12-30: Service Feature Detail Pages Creation
 - **4つの記事LPページ新規作成**: crm-sfa.htmlと同じデザインパターン
   - **ma-tool.html**: MAツール（マーケティングオートメーション）詳細ページ
