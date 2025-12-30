@@ -39,6 +39,18 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-12-30: CRM/SFA Article LP Page Creation
+- **crm-sfa.html新規作成**: SEO最適化された記事型ランディングページ
+  - **構成**: 共感→課題→なぜ問題が起きるのか→BizCraft Studioの強み→中間CTA→選ばれる理由→FAQ→まとめ
+  - **SEO対応**: meta description, OGP, FAQPage構造化データ（JSON-LD）
+  - **ビジュアル説明セクション**: 
+    - 「なぜ問題が起きるのか」: 図解画像（data_chaos_infographic_diagram.png）+ ポイントカード形式
+    - 「BizCraft Studioの強み」: 図解画像（unified_crm_solution_diagram.png）+ ポイントカード形式
+  - **新CSSクラス**: .visual-explanation, .point-card, .article-content, .cta-card等
+- **リンク追加**: 
+  - service-system.html: 顧客管理システムをクリックでcrm-sfa.htmlへ遷移
+  - price.html: 顧客管理システムカードの「詳しく見る」ボタンからcrm-sfa.htmlへ
+
 ### 2025-12-07: Feature Section Image Conversion
 - **機能例・サイト種類セクションの画像化**:
   - **service-system.html「提供できる機能例」セクション**:

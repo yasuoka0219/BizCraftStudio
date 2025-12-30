@@ -3577,6 +3577,111 @@ ul {
   gap: 1rem;
 }
 
+/* Visual Explanation Section */
+.visual-explanation {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.visual-explanation--reverse {
+  grid-template-columns: 55% 45%;
+}
+
+.visual-explanation--reverse .visual-explanation__image {
+  order: 2;
+}
+
+.visual-explanation--reverse .visual-explanation__content {
+  order: 1;
+}
+
+.visual-explanation__image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.visual-explanation__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visual-explanation__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.visual-explanation__lead {
+  font-size: 1.1rem;
+  color: #E2E8F0;
+  line-height: 1.9;
+}
+
+.visual-explanation__lead strong {
+  color: #00D9FF;
+}
+
+.visual-explanation__points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visual-explanation__conclusion {
+  font-size: 1rem;
+  color: #CBD5E1;
+  line-height: 1.9;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.visual-explanation__conclusion strong {
+  color: #00D9FF;
+}
+
+/* Point Cards */
+.point-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+}
+
+.point-card--problem {
+  border-left: 3px solid #94A3B8;
+}
+
+.point-card--solution {
+  border-left: 3px solid #00D9FF;
+}
+
+.point-card__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.point-card__text {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.7;
+}
+
+.point-card__text strong {
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
 /* Responsive: Article LP */
 @media (max-width: 768px) {
   .page-hero--article {
@@ -3642,5 +3747,39 @@ ul {
 
   .cta-card__buttons .btn {
     width: 100%;
+  }
+
+  .visual-explanation {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .visual-explanation--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-explanation--reverse .visual-explanation__image,
+  .visual-explanation--reverse .visual-explanation__content {
+    order: unset;
+  }
+
+  .visual-explanation__lead {
+    font-size: 1rem;
+  }
+
+  .point-card {
+    padding: 0.85rem 1rem;
+  }
+
+  .point-card__icon {
+    font-size: 1.3rem;
+  }
+
+  .point-card__text {
+    font-size: 0.9rem;
+  }
+
+  .point-card__text strong {
+    font-size: 0.95rem;
   }
 }
