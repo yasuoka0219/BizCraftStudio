@@ -4610,14 +4610,26 @@ ul {
    Case Studies Slider Section
    ================================================ */
 
+.section--light {
+  background: #f8fafc;
+}
+
+.section__title--dark {
+  color: #1e293b;
+}
+
+.section__subtitle--dark {
+  color: #64748B;
+}
+
 .case-slider-section {
-  padding-bottom: 4rem;
-  overflow: hidden;
+  padding: 5rem 0;
 }
 
 .case-slider {
   position: relative;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .case-slider__track {
@@ -4626,12 +4638,17 @@ ul {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 1rem 0 2rem;
-  padding-left: calc((100vw - 1200px) / 2 + 1rem);
-  padding-right: 2rem;
+  padding: 1rem calc((100vw - 1200px) / 2) 1.5rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+@media (max-width: 1240px) {
+  .case-slider__track {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .case-slider__track::-webkit-scrollbar {
@@ -4639,29 +4656,29 @@ ul {
 }
 
 .case-slide {
-  flex: 0 0 340px;
-  min-width: 340px;
+  flex: 0 0 clamp(280px, 30vw, 320px);
+  min-width: 280px;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
   scroll-snap-align: start;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-slide:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .case-slide__header {
-  padding: 1.25rem 1.5rem 0.5rem;
+  padding: 1rem 1.25rem 0.5rem;
   text-align: center;
 }
 
 .case-slide__label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #6366F1;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -4670,7 +4687,7 @@ ul {
 
 .case-slide__number {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
   color: #6366F1;
   line-height: 1.2;
@@ -4678,20 +4695,22 @@ ul {
 
 .case-slide__company {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #1e293b;
-  padding: 0.5rem 1.5rem 1rem;
+  padding: 0.25rem 1.25rem 0.75rem;
   border-bottom: 1px solid #e2e8f0;
 }
 
-.case-slide__image {
+.case-slide__media {
+  position: relative;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  margin: 0;
 }
 
-.case-slide__image img {
+.case-slide__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4699,30 +4718,35 @@ ul {
   transition: transform 0.3s ease;
 }
 
-.case-slide:hover .case-slide__image img {
+.case-slide:hover .case-slide__media img {
   transform: scale(1.05);
 }
 
 .case-slide__title {
-  padding: 1.25rem 1.5rem 1rem;
-  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 1rem 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #1e293b;
-  line-height: 1.6;
-  min-height: 4.5rem;
+  color: #fff;
+  line-height: 1.5;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  margin: 0;
 }
 
 .case-slide__footer {
-  padding: 0 1.5rem 1.5rem;
+  padding: 1rem 1.25rem 1.25rem;
 }
 
 .case-slide__tag {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   border-radius: 4px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-slide__tag--blue {
@@ -4745,64 +4769,51 @@ ul {
   color: #EA580C;
 }
 
-.case-slide__person {
-  margin-bottom: 0.5rem;
-}
-
 .case-slide__name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #1e293b;
+  margin: 0 0 0.25rem;
 }
 
 .case-slide__hashtags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.case-slide__hashtags span {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #64748B;
+  margin: 0;
 }
 
 .case-slider__hint {
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .case-slider__hint span {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #94A3B8;
 }
 
 .case-slider__cta {
   text-align: center;
+  margin-top: 1rem;
 }
 
 /* Responsive - Case Slider */
-@media (max-width: 1200px) {
-  .case-slider__track {
-    padding-left: 2rem;
-  }
-}
-
 @media (max-width: 768px) {
   .case-slide {
-    flex: 0 0 300px;
-    min-width: 300px;
+    flex: 0 0 260px;
+    min-width: 260px;
   }
   
   .case-slider__track {
-    padding-left: 1rem;
     gap: 1rem;
   }
   
-  .case-slide__image {
-    height: 180px;
+  .case-slide__number {
+    font-size: 1.75rem;
   }
   
-  .case-slide__number {
-    font-size: 2rem;
+  .case-slide__title {
+    font-size: 0.85rem;
+    padding: 2.5rem 0.75rem 0.75rem;
   }
 }
