@@ -3682,6 +3682,80 @@ ul {
   font-size: 1rem;
 }
 
+/* Strength Grid Section */
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.strength-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strength-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 217, 255, 0.15);
+}
+
+.strength-card__image {
+  flex: 0 0 40%;
+  max-width: 40%;
+  overflow: hidden;
+}
+
+.strength-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.strength-card:hover .strength-card__image img {
+  transform: scale(1.05);
+}
+
+.strength-card__content {
+  flex: 1;
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.strength-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00D9FF;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.strength-card__text {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.8;
+}
+
+.strength-card__number {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(0, 217, 255, 0.15);
+  line-height: 1;
+  pointer-events: none;
+}
+
 /* Responsive: Article LP */
 @media (max-width: 768px) {
   .page-hero--article {
@@ -3781,5 +3855,38 @@ ul {
 
   .point-card__text strong {
     font-size: 0.95rem;
+  }
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .strength-card {
+    flex-direction: column;
+  }
+
+  .strength-card__image {
+    flex: none;
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .strength-card__content {
+    padding: 1.25rem;
+  }
+
+  .strength-card__title {
+    font-size: 1.1rem;
+  }
+
+  .strength-card__text {
+    font-size: 0.9rem;
+  }
+
+  .strength-card__number {
+    font-size: 2.5rem;
+    bottom: 0.5rem;
+    right: 0.75rem;
   }
 }
