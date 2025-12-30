@@ -4610,16 +4610,12 @@ ul {
    Case Studies Slider Section
    ================================================ */
 
-.section--light {
-  background: #f8fafc;
-}
-
-.section__title--dark {
-  color: #1e293b;
-}
-
-.section__subtitle--dark {
-  color: #64748B;
+.section__label {
+  font-size: 0.85rem;
+  color: #00D9FF;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
 .case-slider-section {
@@ -4656,24 +4652,30 @@ ul {
 }
 
 .case-slide {
-  flex: 0 0 clamp(280px, 30vw, 320px);
-  min-width: 280px;
+  flex: 0 0 320px;
+  min-width: 320px;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   scroll-snap-align: start;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .case-slide:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.case-slide__top {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
 }
 
 .case-slide__header {
-  padding: 1rem 1.25rem 0.5rem;
-  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .case-slide__label {
@@ -4681,70 +4683,42 @@ ul {
   font-size: 0.7rem;
   color: #6366F1;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .case-slide__number {
   display: block;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 300;
   color: #6366F1;
-  line-height: 1.2;
-}
-
-.case-slide__company {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1e293b;
-  padding: 0.25rem 1.25rem 0.75rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.case-slide__media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  margin: 0;
-}
-
-.case-slide__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 0.3s ease;
-}
-
-.case-slide:hover .case-slide__media img {
-  transform: scale(1.05);
+  line-height: 1.1;
 }
 
 .case-slide__title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 3rem 1rem 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  line-height: 1.5;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #1e293b;
+  line-height: 1.6;
   margin: 0;
 }
 
-.case-slide__footer {
-  padding: 1rem 1.25rem 1.25rem;
+.case-slide__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 1.5rem 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.case-slide__info {
+  flex: 1;
 }
 
 .case-slide__tag {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.75rem;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
@@ -4770,42 +4744,66 @@ ul {
 }
 
 .case-slide__name {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #1e293b;
   margin: 0 0 0.25rem;
 }
 
+.case-slide__name span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #64748B;
+}
+
 .case-slide__hashtags {
   font-size: 0.75rem;
-  color: #64748B;
+  color: #94A3B8;
   margin: 0;
+}
+
+.case-slide__thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.case-slide__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .case-slider__hint {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0 0.5rem;
 }
 
 .case-slider__hint span {
-  font-size: 0.8rem;
-  color: #94A3B8;
+  font-size: 0.85rem;
+  color: #64748B;
 }
 
 .case-slider__cta {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Responsive - Case Slider */
 @media (max-width: 768px) {
   .case-slide {
-    flex: 0 0 260px;
-    min-width: 260px;
+    flex: 0 0 280px;
+    min-width: 280px;
   }
   
   .case-slider__track {
     gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .case-slide__number {
@@ -4813,7 +4811,11 @@ ul {
   }
   
   .case-slide__title {
-    font-size: 0.85rem;
-    padding: 2.5rem 0.75rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .case-slide__thumb {
+    width: 60px;
+    height: 60px;
   }
 }
