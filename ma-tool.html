@@ -272,83 +272,43 @@
       </div>
     </section>
 
-    <section class="section" id="contact-form">
-      <div class="container container--article">
-        <h2 class="section__title animate-fade-in-up">資料請求・ご相談</h2>
-        <p class="section__subtitle animate-fade-in-up delay-1">
-          まずは情報収集として、お気軽にお問い合わせください。
-        </p>
-        <form class="contact-form animate-fade-in-up delay-2" action="contact.html" method="get">
-          <div class="contact-form__group">
-            <label class="contact-form__label" for="company">会社名 <span class="contact-form__required">必須</span></label>
-            <input type="text" id="company" name="company" class="contact-form__input" required>
-          </div>
-          <div class="contact-form__group">
-            <label class="contact-form__label" for="name">担当者名 <span class="contact-form__required">必須</span></label>
-            <input type="text" id="name" name="name" class="contact-form__input" required>
-          </div>
-          <div class="contact-form__group">
-            <label class="contact-form__label" for="email">メールアドレス <span class="contact-form__required">必須</span></label>
-            <input type="email" id="email" name="email" class="contact-form__input" required>
-          </div>
-          <div class="contact-form__group">
-            <label class="contact-form__label" for="message">ご相談内容</label>
-            <textarea id="message" name="message" class="contact-form__textarea" rows="5" placeholder="現在の課題やご要望などをお聞かせください"></textarea>
-          </div>
-          <div class="contact-form__submit">
-            <button type="submit" class="btn btn--primary btn--large">送信する</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="cta">
+    <!-- Final CTA Section -->
+    <section class="cta-section">
       <div class="container">
-        <h2 class="cta__title animate-fade-in-up">まずは無料相談から</h2>
-        <p class="cta__text animate-fade-in-up delay-1">
-          「何から始めればいいかわからない」という段階でも大丈夫です。<br>
-          貴社の課題を整理し、最適な解決策をご提案します。
-        </p>
-        <a href="contact.html" class="btn btn--primary animate-fade-in-up delay-2">無料相談を申し込む</a>
+        <div class="cta-content">
+          <h2 class="cta-title">Contact</h2>
+          <p class="cta-subtitle">● お問い合わせ</p>
+          <p class="cta-text">
+            MAツール（マーケティングオートメーション）に関するご相談は、お気軽にお問い合わせください。<br>
+            まずは無料相談で、現状の課題や実現したいことをお聞かせください。
+          </p>
+          <a href="contact.html" class="cta-button">
+            お問い合わせはこちら
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__brand">
-          <a href="index.html" class="footer__logo">BizCraft <span>Studio</span></a>
-          <p class="footer__tagline">中小企業のDX・AI活用をサポート</p>
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__logo">
+          BizCraft <span>Studio</span>
         </div>
-        <div class="footer__links">
-          <div class="footer__column">
-            <h4 class="footer__heading">サービス</h4>
-            <ul class="footer__list">
-              <li><a href="service-system.html">業務システム開発</a></li>
-              <li><a href="service-website.html">Webサイト制作</a></li>
-              <li><a href="service-ai.html">AIツール開発</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h4 class="footer__heading">会社情報</h4>
-            <ul class="footer__list">
-              <li><a href="about.html">会社概要</a></li>
-              <li><a href="works.html">実績紹介</a></li>
-              <li><a href="voice.html">お客様の声</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h4 class="footer__heading">お問い合わせ</h4>
-            <ul class="footer__list">
-              <li><a href="contact.html">無料相談</a></li>
-              <li><a href="price.html">料金プラン</a></li>
-            </ul>
-          </div>
-        </div>
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__nav-link">ホーム</a>
+          <a href="works.html" class="footer__nav-link">実績</a>
+          <a href="voice.html" class="footer__nav-link">お客様の声</a>
+          <a href="price.html" class="footer__nav-link">料金プラン</a>
+          <a href="about.html" class="footer__nav-link">会社情報</a>
+          <a href="contact.html" class="footer__nav-link">お問い合わせ</a>
+          <a href="#" class="footer__nav-link">プライバシーポリシー</a>
+        </nav>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2025 BizCraft Studio. All rights reserved.</p>
+        <p>&copy; 2025 BizCraft Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>
