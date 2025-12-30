@@ -39,6 +39,16 @@ None. The project is built using pure HTML and CSS with no external libraries, f
 
 ## Recent Changes
 
+### 2025-12-30: Service Feature Detail Pages Creation
+- **4つの記事LPページ新規作成**: crm-sfa.htmlと同じデザインパターン
+  - **ma-tool.html**: MAツール（マーケティングオートメーション）詳細ページ
+  - **sns-auto.html**: SNS自動投稿システム詳細ページ
+  - **ai-article.html**: AI記事制作サービス詳細ページ
+  - **custom-solution.html**: オーダーメイドソリューション開発詳細ページ
+- **共通構成**: ヒーロー → 共感セクション → 問題リスト → BizCraft Studioの強み（2x2グリッド）→ 中間CTA → FAQ → まとめ → 最終CTA
+- **SEO対応**: 各ページにmeta description, OGP, FAQPage構造化データ（JSON-LD）
+- **リンク設定**: service-system.htmlの「提供できる機能例」セクションから全5ページへのリンク
+
 ### 2025-12-30: CRM/SFA Article LP Page Creation
 - **crm-sfa.html新規作成**: SEO最適化された記事型ランディングページ
   - **構成**: 共感→課題→なぜ問題が起きるのか→BizCraft Studioの強み→中間CTA→選ばれる理由→FAQ→まとめ
