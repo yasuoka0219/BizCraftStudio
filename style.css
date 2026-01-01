@@ -198,7 +198,7 @@ ul {
 }
 
 .header__logo img {
-  height: 28px;
+  height: 22px;
   width: auto;
 }
 
@@ -339,7 +339,7 @@ ul {
   }
 
   .header__logo img {
-    height: 24px;
+    height: 20px;
   }
 }
 
@@ -2845,7 +2845,7 @@ ul {
 }
 
 .footer__logo img {
-  height: 28px;
+  height: 22px;
   width: auto;
 }
 
@@ -2990,7 +2990,7 @@ ul {
   }
 
   .footer__logo img {
-    height: 24px;
+    height: 20px;
   }
 
   .footer__nav {
