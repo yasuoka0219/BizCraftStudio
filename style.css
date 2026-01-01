@@ -198,9 +198,8 @@ ul {
 }
 
 .header__logo img {
-  height: 40px;
+  height: 28px;
   width: auto;
-  filter: brightness(1.1);
 }
 
 .header__nav-toggle {
@@ -340,7 +339,7 @@ ul {
   }
 
   .header__logo img {
-    height: 32px;
+    height: 24px;
   }
 }
 
@@ -2846,9 +2845,8 @@ ul {
 }
 
 .footer__logo img {
-  height: 36px;
+  height: 28px;
   width: auto;
-  filter: brightness(1.1);
 }
 
 .footer__nav {
@@ -2992,7 +2990,7 @@ ul {
   }
 
   .footer__logo img {
-    height: 32px;
+    height: 24px;
   }
 
   .footer__nav {
