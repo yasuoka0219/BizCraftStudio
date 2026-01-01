@@ -4208,6 +4208,26 @@ ul {
   background: linear-gradient(135deg, #0A0E27 0%, #1E293B 100%);
 }
 
+.page-header__content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: center;
+}
+
+.page-header__text {
+  flex: 1;
+}
+
+.page-header__hero-image {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
 .page-header__title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -4573,6 +4593,18 @@ ul {
   }
 }
 
+@media (max-width: 992px) {
+  .page-header__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .page-header__hero-image {
+    max-width: 100%;
+    order: -1;
+  }
+}
+
 @media (max-width: 768px) {
   .page-header {
     padding: 6rem 0 2rem;
@@ -4580,6 +4612,10 @@ ul {
   
   .page-header__title {
     font-size: 1.75rem;
+  }
+  
+  .page-header__hero-image {
+    max-width: 100%;
   }
   
   .column-grid,
@@ -4810,10 +4846,7 @@ ul {
    Voice Detail Page
    ================================================ */
 .voice-detail {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: 3rem;
-  align-items: start;
+  display: block;
 }
 
 .voice-detail__main {
